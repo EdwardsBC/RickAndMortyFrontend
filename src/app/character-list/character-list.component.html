@@ -1,0 +1,41 @@
+<div class="search-container">
+  <input type="text" placeholder="Buscar personajes" [(ngModel)]="searchTerm" (input)="filterCharacters()" />
+</div>
+<div *ngIf="error; else characterList">
+  <p>{{ error }}</p>
+</div>
+<ng-template #characterList>
+  <div class="character-grid">
+    <div *ngFor="let character of filteredCharacters" class="character-card">
+      <div class="character-image-container">
+        <img [src]="character.image" alt="{{ character.name }}" class="character-image">
+      </div>
+      <div class="character-info-container">
+        <div class="character-info">
+          <p class="character-name">{{ character.name }}</p>
+          <div class="character-status">
+            <span [ngClass]="{
+              'status-indicator': true,
+              'alive': character.status === 'Alive',
+              'dead': character.status === 'Dead',
+              'unknown': character.status === 'unknown'
+            }"></span>
+            <span>{{ character.status }} - {{ character.species }}</span>
+          </div>
+          <div class="character-location">
+            <p class="location-label">Last know location:</p>
+            <p class="location-name">{{ character.location.name }}</p>
+          </div>
+          <div class="character-episode">
+            <p class="episode-label">First seen in:</p>
+            <p class="episode-name">{{ character.firstEpisodeName }}</p>
+          </div>
+          <a [routerLink]="['/characters', character.id]" class="character-details">Detalles</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noCharacters>
+    <p>No se encontraron personajes.</p>
+  </ng-template>
+</ng-template>

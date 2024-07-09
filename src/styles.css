@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: rgb(17, 15, 15);
+}
+
+.character-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .character-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    .character-card {
+      margin: 5px;
+      padding: 5px;
+    }
+  }
+  

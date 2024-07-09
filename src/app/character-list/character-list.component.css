@@ -1,0 +1,144 @@
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-container input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  width: 50%;
+}
+
+.character-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.character-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  box-sizing: border-box;
+}
+
+.character-image-container {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.character-info-container {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.character-info {
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 14px;
+  padding: 5px;
+  min-width: 0;
+}
+
+.character-name {
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  font-size: 25px;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.character-status {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.alive {
+  background-color: green;
+}
+
+.dead {
+  background-color: red;
+}
+
+.unknown {
+  background-color: yellow;
+}
+
+.character-details {
+  color: #1e90ff;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0;
+}
+
+.character-location,
+.character-episode {
+  margin: 6px;
+}
+
+.location-label,
+.episode-label {
+  color: #888888;
+  margin: 0;
+}
+
+.location-name {
+  color: #ffcc00;
+  margin: 0;
+}
+
+.episode-name {
+  color: #ffffff;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  margin: 0;
+}
