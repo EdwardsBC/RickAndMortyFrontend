@@ -2,7 +2,7 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Consolas, monospace;
 }
 
 .search-container {
@@ -37,6 +37,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   width: 500px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .character-image-container {
@@ -47,6 +48,7 @@ body {
   width: 150px;
   height: 150px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .character-info-container {
@@ -80,7 +82,7 @@ body {
   font-weight: bold;
   color: #ffffff;
   margin: 0;
-  font-size: 25px;
+  font-size: 22px;
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
@@ -113,15 +115,25 @@ body {
 }
 
 .character-details {
-  color: #1e90ff;
-  text-decoration: underline;
-  cursor: pointer;
-  margin: 0;
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #32cd32;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.character-details:hover {
+  background-color: #228b22;
 }
 
 .character-location,
 .character-episode {
-  margin: 6px;
+  margin: 6px 0;
 }
 
 .location-label,

@@ -7,7 +7,7 @@
 <ng-template #characterList>
   <div class="character-grid">
     <div *ngFor="let character of filteredCharacters" class="character-card">
-      <div class="character-image-container">
+      <div class="character-image-container" (click)="goToDetails(character.id)">
         <img [src]="character.image" alt="{{ character.name }}" class="character-image">
       </div>
       <div class="character-info-container">
@@ -23,14 +23,13 @@
             <span>{{ character.status }} - {{ character.species }}</span>
           </div>
           <div class="character-location">
-            <p class="location-label">Last know location:</p>
+            <p class="location-label">Last known location:</p>
             <p class="location-name">{{ character.location.name }}</p>
           </div>
           <div class="character-episode">
             <p class="episode-label">First seen in:</p>
             <p class="episode-name">{{ character.firstEpisodeName }}</p>
           </div>
-          <a [routerLink]="['/characters', character.id]" class="character-details">Detalles</a>
         </div>
       </div>
     </div>
